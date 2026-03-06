@@ -4,11 +4,11 @@ import { ExternalLink, Layers } from 'lucide-react';
 const projectsData = [
     {
         id: 1,
-        title: "JoxaPay",
+        title: "Jaxopay",
         role: "Full Stack Developer",
         impact: "A modern fintech payment platform enabling seamless and secure digital transactions.",
         tags: ["Fintech", "Payments", "React", "Node.js"],
-        liveLink: "https://joxapay.com",
+        liveLink: "https://jaxopay.com",
         codeLink: "#",
         feature: "Live"
     },
