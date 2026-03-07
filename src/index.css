@@ -25,6 +25,20 @@
   --font-display: 'Playfair Display', serif;
 }
 
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --bg-alt: #2d2d2d;
+  --text-primary: #f5f3ef;
+  --text-secondary: #b8b8b8;
+  --accent-gold: #d4a84b;
+  --accent-gold-light: #e8c26f;
+  --accent-slate: #8fa3b8;
+  --accent-slate-light: #a8b8d0;
+  --glass-bg: rgba(0, 0, 0, 0.4);
+  --glass-border: rgba(212, 168, 75, 0.2);
+  --shadow-warm: rgba(184, 136, 42, 0.25);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -104,6 +118,11 @@ ul {
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--glass-border);
   padding: 1rem 0;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(26, 26, 26, 0.95);
 }
 
 .navbar-container {
@@ -180,9 +199,29 @@ main {
 .social-icon {
   color: var(--text-secondary);
   transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .social-icon:hover {
+  color: var(--accent-gold);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
   color: var(--accent-gold);
 }
 
@@ -202,6 +241,65 @@ main {
   position: relative;
   overflow: hidden;
   gap: 4rem;
+}
+
+.hero-carousel-mobile {
+  width: 100%;
+  position: relative;
+}
+
+.hero-slide {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-carousel-controls {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.carousel-btn {
+  background: none;
+  border: 1.5px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--accent-gold);
+  color: #fff;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  border: none;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.dot.active {
+  opacity: 1;
 }
 
 .hero::before {
@@ -483,6 +581,14 @@ main {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  .hero-carousel-controls {
+    display: flex;
+  }
+
+  .hero-slide {
+    flex-direction: column-reverse;
+  }
+
   .hero {
     flex-direction: column-reverse;
     text-align: center;

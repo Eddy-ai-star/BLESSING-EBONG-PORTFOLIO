@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Linkedin, Mail, Moon, Sun } from 'lucide-react';
+import { ThemeContext } from '../context/ThemeContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isDark, toggleTheme } = useContext(ThemeContext);
 
   const navLinkClass = ({ isActive }) =>
     `nav-link${isActive ? ' nav-link--active' : ''}`;
@@ -23,6 +25,13 @@ const Navbar = () => {
         </div>
 
         <div className="nav-socials desktop-only">
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            title={isDark ? "Light mode" : "Dark mode"}
+          >
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
           <a
             href="https://www.linkedin.com/in/blessing-ebong-692b52263?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             target="_blank"
@@ -50,6 +59,13 @@ const Navbar = () => {
           <NavLink to="/projects" className="mobile-link" onClick={() => setIsOpen(false)}>Projects</NavLink>
           <NavLink to="/about" className="mobile-link" onClick={() => setIsOpen(false)}>About</NavLink>
           <div className="mobile-socials">
+            <button
+              className="theme-toggle"
+              onClick={toggleTheme}
+              title={isDark ? "Light mode" : "Dark mode"}
+            >
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
             <a
               href="https://www.linkedin.com/in/blessing-ebong-692b52263?utm_source=share_via&utm_content=profile&utm_medium=member_android"
               target="_blank"
