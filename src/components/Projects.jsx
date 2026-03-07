@@ -4,41 +4,41 @@ import { ExternalLink, Layers } from 'lucide-react';
 const projectsData = [
     {
         id: 1,
-        title: "Jaxopay",
+        title: "MEEI Program",
         role: "Full Stack Developer",
-        impact: "A modern fintech payment platform enabling seamless and secure digital transactions.",
-        tags: ["Fintech", "Payments", "React", "Node.js"],
-        liveLink: "https://jaxopay.com",
+        impact: "Comprehensive program platform designed to deliver educational resources and training initiatives with modern web technologies.",
+        tags: ["Education", "Program Management", "React", "Node.js"],
+        liveLink: "https://www.meeiprogram.org",
         codeLink: "#",
         feature: "Live"
     },
     {
         id: 2,
-        title: "FriiMarket",
+        title: "1st Priority Petroleum",
         role: "Full Stack Developer",
-        impact: "Nigeria's premier marketplace for local & global trade — buy, sell, and source from China with secure escrow payments and agent-powered verification.",
-        tags: ["E-Commerce", "Marketplace", "Escrow", "React"],
-        liveLink: "https://friimarket.com",
+        impact: "Leading petroleum services platform providing reliable energy solutions and product distribution across multiple regions.",
+        tags: ["Energy", "E-Commerce", "Enterprise", "React"],
+        liveLink: "https://www.1stprioritypetroleum.com",
         codeLink: "#",
         feature: "Live"
     },
     {
         id: 3,
-        title: "HeemssCare",
+        title: "Eticone Energy",
         role: "Full Stack Developer",
-        impact: "UK's trusted on-demand care marketplace connecting families with verified carers in minutes for quality home care.",
-        tags: ["Healthcare", "Marketplace", "React", "UK"],
-        liveLink: "https://heemscare.com",
+        impact: "Innovative energy solutions provider offering sustainable and efficient energy management systems for businesses and communities.",
+        tags: ["Energy", "Sustainability", "React", "Enterprise"],
+        liveLink: "https://www.eticonenergy.com",
         codeLink: "#",
         feature: "Live"
     },
     {
         id: 4,
-        title: "Shop4Me",
+        title: "Comternet",
         role: "Full Stack Developer",
-        impact: "Shop from any market in Nigeria without leaving home — trusted agents, transparent pricing, and doorstep delivery.",
-        tags: ["E-Commerce", "Nigeria", "Delivery", "React"],
-        liveLink: "https://shop4meng.com",
+        impact: "Communications and internet infrastructure platform providing connectivity solutions and digital services for modern enterprises.",
+        tags: ["Telecommunications", "Internet", "Enterprise", "React"],
+        liveLink: "https://www.comternet.com",
         codeLink: "#",
         feature: "Live"
     }
