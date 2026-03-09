@@ -243,11 +243,16 @@ main {
   gap: 4rem;
 }
 
-/* Home Carousel Styles */
-.home-page {
+/* Home Page Styles */
+.home-page-desktop {
   width: 100%;
 }
 
+.home-page-mobile {
+  width: 100%;
+}
+
+/* Mobile Carousel Styles */
 .home-carousel-wrapper {
   width: 100%;
   position: relative;
