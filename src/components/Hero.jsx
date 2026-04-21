@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, Linkedin } from 'lucide-react';
+import ChatBubble from './ChatBubble';
 
 const Hero = () => {
     return (
@@ -40,6 +41,7 @@ const Hero = () => {
                     />
                 </div>
             </div>
+            <ChatBubble />
         </section>
     );
 };
